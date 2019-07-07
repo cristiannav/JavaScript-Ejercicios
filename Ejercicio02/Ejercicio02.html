@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio02</title>
+  <head>
+  <body>
+
+<script>
+
+
+var miFuncion = function(num1, num2){
+  return num1 ** num2;
+}
+document.write(miFuncion(5, 2));
+
+
+</script>
+
+<br/> <br/>
+
+
+<script>
+
+var cuadrado = function(num){
+  return num ** 2;
+}
+
+document.write(cuadrado(4));
+
+
+</script>
+
+
+<br/> <br />
+
+<script>
+
+/*
+function asignacion(){
+  var numero = 5;
+}
+
+console.log(numero);
+*/
+
+</script>
+
+<script>
+
+var trianguloRectangulo = function(a, b){
+
+  var hipotenusa = Math.hypot(a, b)
+
+  var resultado = a + b + hipotenusa;
+
+  return resultado;
+
+}
+
+document.write(trianguloRectangulo(3, 4));
+
+</script>
+
+<br/> <br />
+
+
+<script>
+
+function miSandwich(ing1, ing2, callback){
+  setTimeout(function(){
+    console.log("Estoy comiendo mi sandwich de " + ing1 + " y " + ing2);
+    callback();
+  }, 3000);
+  }
+  function termine(){
+    console.log("Termine de comer mi sandwich");
+}
+
+miSandwich("jamon", "queso", termine());
+
+
+</script>
+
+<!--ARRAYS-->
+
+<script>
+
+[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20].forEach(function(value, index){
+
+  if(value % 7 == 0){
+  console.log(value);
+}
+}
+)
+
+</script>
+
+<br/> <br />
+
+
+<script>
+
+arrayResultado = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20].map(function(value){
+
+  return Math.sqrt(value)
+
+})
+
+console.log(arrayResultado);
+
+
+</script>
+
+<br/> <br />
+
+<script>
+
+
+var enigma =
+["l", 1, "a", 2, 2, 5, "p", 5, 7, 5, 3, "e", 5, "r", 7, 6, 5, 3, 2, 1, "s", 9, 9, 9, 6, "e", 2, "v",
+5, "e", 3, "r", 2, "a", 1, 6, 4 ,1, 2, "n", 2, "c", 3, 5, ,5 ,5, 7, "i", 4, "a", 5, 2, 1, 3, "e", 5,
+"s", 7, "l", 4, "a", 3,  "c", 2, 3, 1, 5, 3, 2, "l", 3, "a", 4, "v", 5, "e", 6].filter(function(value){
+   if(typeof value == 'string'){
+     return value;
+   }
+ });
+
+console.log(enigma);
+
+</script>
+
+<br/> <br />
+
+<script>
+
+var enigma0 = [];
+
+var enigma1 =
+["l", 1, "a", 2, 2, 5, "p", 5, 7, 5, 3, "e", 5, "r", 7, 6, 5, 3, 2, 1, "s", 9, 9, 9, 6, "e", 2, "v",
+5, "e", 3, "r", 2, "a", 1, 6, 4 ,1, 2, "n", 2, "c", 3, 5, ,5 ,5, 7, "i", 4, "a", 5, 2, 1, 3, "e", 5,
+"s", 7, "l", 4, "a", 3,  "c", 2, 3, 1, 5, 3, 2, "l", 3, "a", 4, "v", 5, "e", 6].filter(function(value){
+
+  if(typeof value == 'number'){
+    enigma0.push(value);
+  }
+});
+
+var enigma2 = enigma0.reduce(function(total, value){
+  return total + value;
+});
+
+console.log(enigma2)
+
+</script>
+
+<br/> <br />
+
+<!--OBJETO LITERAL-->
+
+<script>
+
+var persona = {
+  edad: 20,
+  nombre: "Juan",
+  apellido: "Diaz",
+  sexo: "Maculino",
+  estadoCivil: "Soltero",
+  peliculasFavoritas: ["La isla", "La naranja mecanica", "trainspotting"]
+}
+
+console.log(persona);
+
+persona.edad = 21;
+
+console.log(persona);
+
+persona.estatura = 1.81;
+
+console.log(persona);
+
+persona.saludo = function(nombre, apellido){
+    return persona.nombre + " " + persona.apellido;
+};
+
+console.log(persona.saludo());
+
+persona.comer = function(comida){
+  return "Estoy comiendo " + comida;
+}
+
+console.log(persona.comer("fideos"));
+
+</script>
+
+
+</body>
+</html>

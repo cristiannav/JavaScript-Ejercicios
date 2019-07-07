@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio05</title>
+  <head>
+
+  <body>
+
+    <input type="button" value="Saludar" id="saludo">
+
+    <input type="button" value="Cambiar Fondo" id="fondo">
+
+    </br>
+    <img src="./img/dv.jpg" id="imagen1" style="width:500px">
+
+    </br>
+    <img src="./img/linkedin.jpg" id="imagen2" style="width:500px">
+
+  </br></br>
+  <form action="https://www.google.com.ar">
+    Nombre y Apellido: </br>
+    <input type="text" placeholder="Ingrese nombre" id="nombre">
+    </br>
+    Edad: </br>
+    <input type="number" placeholder="Ingrese edad" id="edad">
+    </br>
+    Sexo: </br>
+    <input type="text" placeholder="Ingrese sexo" id="sexo">
+    </br></br>
+    <input type="submit" value="Enviar" id="enviar">
+  </form>
+
+
+  </body>
+
+<script>
+
+window.onload = function(){
+
+var saludo = document.getElementById("saludo");
+
+var saludar = function(){
+  alert("hola");
+}
+
+saludo.addEventListener("click", saludar);
+
+var fondo = document.getElementById("fondo");
+
+var body = document.querySelector("body");
+
+fondo.onclick = function(){
+
+  body.style.background = "blue";
+
+}
+
+var imagen1 = document.getElementById("imagen1");
+
+imagen1.onmouseover = function(){
+  console.log("estoy viendo la imagen");
+}
+
+var imagen2 = document.getElementById("imagen2");
+
+var clickImagen = function(){
+  console.log("estoy cliqueando la imagen");
+}
+
+imagen2.addEventListener("click", clickImagen);
+
+
+var fondoBody = function(){
+
+  this.style.background = "red";
+
+}
+
+body.addEventListener("click", fondoBody);
+
+body.removeEventListener("click", fondoBody);
+
+
+document.getElementById('enviar').addEventListener("click", no_enviar);
+
+}
+
+function no_enviar(){
+
+  document.getElementById("formulario").action = "https://www.google.com.ar";
+}
+
+var evento = function(){
+
+  var evento1 = event.clientX;
+  var evento2 = event.clientY;
+
+  console.log(evento1, evento2);
+
+}
+
+
+imagen1.addEventListener("click", evento);
+
+imagen2.addEventListener("mouseover", evento);
+
+
+
+
+</script>
+
+</html>

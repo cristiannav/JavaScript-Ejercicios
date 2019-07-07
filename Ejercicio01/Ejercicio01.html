@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio01</title>
+  <head>
+  <body>
+
+<script>
+
+var aleatorio = Math.floor(Math.random()*11);
+
+switch(aleatorio){
+  case 1:
+    console.log("Cantar una cancion");
+  break;
+  case 2:
+    console.log("Dar una vuelta carnero");
+  break;
+  case 3:
+    console.log("Juego 1")
+  break;
+  case 4:
+    console.log("juego 2");
+  break;
+  case 5:
+    console.log("Juego 3")
+  break;
+  case 6:
+    console.log("juego 4");
+  break;
+  case 7:
+    console.log("Juego 5")
+  break;
+  case 8:
+    console.log("juego 6");
+  break;
+  case 9:
+    console.log("Juego 7")
+  break;
+  case 10:
+    console.log("juego 8");
+  break;
+  default:
+   console.log("Otro Juego");
+}
+
+</script>
+
+
+<script>
+
+for(var i=1; i<1000; i++){
+  document.write(i + " ovejitas<br/>");
+  if(i == 10){
+    break;
+  }
+}
+
+
+</script>
+
+
+<script>
+
+
+function numerosPares(){
+  var i = 0;
+  while(i<51){
+    console.log(i*2)
+    i++;
+  }
+}
+numerosPares();
+
+
+</script>
+
+
+<script>
+
+
+function numerosPares(){
+
+  var i = 0;
+
+  do{
+    document.write(i*2);
+    document.write("<br/>");
+    i++;
+  }while (i<51) {
+
+  }
+
+}
+
+numerosPares();
+
+
+</script>
+
+</body>
+
+</html>
